@@ -182,7 +182,11 @@ class TravelsoftIBlockGetListByFilter extends CBitrixComponent {
                 $сache->abortDataCache();
  
         } 
-        
+
+		if ($arParams['RETURN_RESULT'] == "Y") {
+			return $this->arResult;		
+		}        
+
         $this->includeComponentTemplate();
         
     }

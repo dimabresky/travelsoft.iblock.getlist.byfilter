@@ -33,6 +33,14 @@ $arComponentParameters["PARAMETERS"]["ORDER"] = array(
     
 );
 
+$arComponentParameters["PARAMETERS"]["RETURN_RESULT"] = array(
+
+                "PARENT" => "BASE",
+                "NAME" => "Возвращать только результат",
+                "TYPE" => "CHECKBOX",
+    
+);
+
 $arComponentParameters["PARAMETERS"]["TITLE"] = array(
 
                 "PARENT" => "BASE",
