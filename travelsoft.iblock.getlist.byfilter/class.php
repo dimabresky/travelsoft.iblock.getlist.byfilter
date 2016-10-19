@@ -183,9 +183,9 @@ class TravelsoftIBlockGetListByFilter extends CBitrixComponent {
  
         } 
 
-		if ($arParams['RETURN_RESULT'] == "Y") {
-			return $this->arResult;		
-		}        
+        if ($this->arParams['RETURN_RESULT'] == "Y") {
+                return $this->arResult;		
+        }        
 
         $this->includeComponentTemplate();
         
