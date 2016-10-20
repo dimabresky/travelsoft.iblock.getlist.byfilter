@@ -106,12 +106,11 @@ class TravelsoftIBlockGetListByFilter extends CBitrixComponent {
      */
     protected function setCacheID () {
         
-        $this->cacheId = serialize($this->arParams) 
-                                . serialize($this->arFilter) 
-                                    . serialize($this->arSelect) 
-                                        . serialize($this->arSort) 
-                                            . serialize($this->arNavigation);
-        
+        $this->cacheID = md5(serialize($this->arParams) 
+                                            . serialize($this->arFilter) 
+                                                . serialize($this->arSelect) 
+                                                    . serialize($this->arSort) 
+                                                        . serialize($this->arNavigation));
     }
     
     /**
@@ -143,7 +142,7 @@ class TravelsoftIBlockGetListByFilter extends CBitrixComponent {
         }
         
         if ($сache->initCache($this->arParams['CACHE_TIME'], $this->cacheID, $this->cacheDir)) {
-
+            
             $this->arResult = $сache->getVars(); 
             
         } elseif ($сache->startDataCache()) {
