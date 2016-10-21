@@ -166,7 +166,7 @@ class TravelsoftIBlockGetListByFilter extends CBitrixComponent {
                 
             }
             
-            if ($this->arResult) {
+            if (!empty($this->arResult)) {
  
                 if(defined("BX_COMP_MANAGED_CACHE")) {
                         global $CACHE_MANAGER;
